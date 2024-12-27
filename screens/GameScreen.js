@@ -3,8 +3,11 @@ import React from 'react';
 
 export default function GameScreen() {
   return (
-    <View >
-      <Text>GameScreen</Text>
+ <View style={styles.container}>
+      <Title>Bilgisayar Tahmini</Title>
+      <View>
+        <Text>Altında mı Üstünde mi?</Text>
+      </View>
     </View>
   );
 }
