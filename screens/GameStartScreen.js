@@ -14,6 +14,7 @@ export default function GameStartScreen() {
       Alert.alert("Geçersiz Sayı!", "Sayı 1 ile 99 arasında olmalıdır", [
         { text: "Tamam", style: "destructive", onPress: resetHandler },
       ]);
+      return
     }
   }
   function numberHandler(text) {
