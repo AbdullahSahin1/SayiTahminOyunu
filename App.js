@@ -27,7 +27,7 @@ export default function App() {
         source={require("./assets/back.jpg")}
         imageStyle={styles.backImage}
       >
-        <GameStartScreen />
+       {screen}
       </ImageBackground>
     </LinearGradient>
   );
