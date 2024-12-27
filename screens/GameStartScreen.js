@@ -1,6 +1,7 @@
 import { Alert, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 import CustomButton from "../components/CustomButton";
+import Title from "../components/Title";
 
 export default function GameStartScreen() {
   const [enteredNumber, setEenteredNumber] = useState("");
