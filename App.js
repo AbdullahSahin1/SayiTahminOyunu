@@ -5,17 +5,15 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import GameScreen from "./screens/GameScreen";
 export default function App() {
-  const [userNumber, setUserNumber] = useState(null);
+ const [userNumber, setUserNumber] = useState(null);
 
   function sendedNumberHandler(sendedNumber) {
     setUserNumber(sendedNumber);
   }
 
   let screen = <GameStartScreen onSendNumber={sendedNumberHandler} />;
-  if (userNumber){
-    screen= (
-      <GameScreen/>
-    )
+  if (userNumber) {
+    screen = <GameScreen />;
   }
   return (
     <LinearGradient
