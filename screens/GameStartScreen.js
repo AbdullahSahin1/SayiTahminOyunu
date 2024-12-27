@@ -22,7 +22,7 @@ export default function GameStartScreen() {
   }
   return (
     <View style={styles.container}>
-      <Text>Sayı Tahmin Uygulaması</Text>
+      <Title>Sayı Tahmin Uygulaması</Title>
       <View style={styles.card}>
         <TextInput
           style={styles.input}
