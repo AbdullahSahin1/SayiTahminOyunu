@@ -5,7 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import GameScreen from "./screens/GameScreen";
 export default function App() {
- const [userNumber, setUserNumber] = useState(null);
+  const [userNumber, setUserNumber] = useState(null);
 
   function sendedNumberHandler(sendedNumber) {
     setUserNumber(sendedNumber);
@@ -13,7 +13,7 @@ export default function App() {
 
   let screen = <GameStartScreen onSendNumber={sendedNumberHandler} />;
   if (userNumber) {
-    screen = <GameScreen />;
+    screen = <GameScreen userNumber={userNumber}/>;
   }
   return (
     <LinearGradient
@@ -25,7 +25,7 @@ export default function App() {
         source={require("./assets/back.jpg")}
         imageStyle={styles.backImage}
       >
-       {screen}
+        {screen}
       </ImageBackground>
     </LinearGradient>
   );
