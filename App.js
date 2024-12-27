@@ -2,6 +2,8 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, ImageBackground } from "react-native";
 import GameStartScreen from "./screens/GameStartScreen";
 import { LinearGradient } from "expo-linear-gradient";
+import { useState } from "react";
+import GameScreen from "./screens/GameScreen";
 export default function App() {
   return (
     <LinearGradient
