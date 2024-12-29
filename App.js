@@ -7,22 +7,22 @@ import GameScreen from "./screens/GameScreen";
 import { useEffect, useState } from "react";
 import GameOverScreen from "./screens/GameOverScreen";
 export default function App() {
-  const [userNumber, setUserNumber] = useState(null);
   const [gameIsOver, setGameIsOver] = useState(true);
+  const [userNumber, setUserNumber] = useState(null);
 
   function sendedNumberHandler(sendedNumber) {
     setUserNumber(sendedNumber);
     setGameIsOver(false);
   }
-  function sendedNumberHandler(sendedNumber) {
-    setUserNumber(sendedNumber);
-  }
 
   let screen = <GameStartScreen onSendNumber={sendedNumberHandler} />;
+
   if (userNumber) {
-    screen = <GameScreen userNumber={userNumber}/>;
+    screen = (
+      <GameScreen userNumber={userNumber} onGameOver={gameOverHandler} />
+    );
   }
-    function gameOverHandler() {
+  function gameOverHandler() {
     setGameIsOver(true);
   }
   if (gameIsOver && userNumber) {
