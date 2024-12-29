@@ -59,7 +59,7 @@ export default function GameScreen({ userNumber,onGameOver }) {
         <Text>Altında mı üstünde mi?</Text>
          <View>
           <CustomButton onPress={nextGuesssHandler.bind(this, 'lower')}>
-            -
+            <AntDesign name="minus" size={24} color="white" />
           </CustomButton>
           <CustomButton onPress={nextGuesssHandler.bind(this, 'greater')}>
             +
