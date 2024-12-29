@@ -4,9 +4,11 @@ import GameStartScreen from "./screens/GameStartScreen";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import GameScreen from "./screens/GameScreen";
+import { useEffect, useState } from "react";
+import GameOverScreen from "./screens/GameOverScreen";
 export default function App() {
   const [userNumber, setUserNumber] = useState(null);
-
+  
   function sendedNumberHandler(sendedNumber) {
     setUserNumber(sendedNumber);
   }
