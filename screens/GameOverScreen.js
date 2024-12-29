@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-
+import Title from '../components/Title';
+import CustomButton from '../components/CustomButton';
 export default function GameOverScreen() {
   return (
     <View style={styles.container}>
