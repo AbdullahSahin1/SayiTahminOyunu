@@ -67,6 +67,17 @@ export default function GameScreen({ userNumber,onGameOver }) {
 
           </CustomButton>
         </View>
+   <FlatList
+          data={guessCount}
+          keyExtractor={(itemData)=>itemData}
+          renderItem={(itemData) => (
+            <ComputerGuess
+              roundNumber={guessCount.length - itemData.index}
+              guess={itemData.item}
+              
+            />
+          )}
+        />
       </View>
     </View>
   );
