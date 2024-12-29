@@ -92,4 +92,17 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: "row",
   },
+     card: {
+    backgroundColor: "orange",
+    padding: 16,
+    marginTop: 20,
+    elevation: 4,
+    shadowColor: "black",
+    shadowOffset: { width: 0, height: 0 },
+    shadowRadius: 6,
+    shadowOpacity: 0.25,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
