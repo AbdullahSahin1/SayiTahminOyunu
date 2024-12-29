@@ -5,7 +5,7 @@ import ComputerNumber from '../components/ComputerNumber';
 import CustomButton from '../components/CustomButton';
    let minNumber = 1;
   let maxNumber = 100;
-export default function GameScreen({ userNumber }) {
+export default function GameScreen({ userNumber,onGameOver }) {
   const initialGuess = generateNumber(1, 100, userNumber);
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
      useEffect(() => {
