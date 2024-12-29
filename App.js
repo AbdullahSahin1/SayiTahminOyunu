@@ -22,6 +22,12 @@ export default function App() {
   if (userNumber) {
     screen = <GameScreen userNumber={userNumber}/>;
   }
+    function gameOverHandler() {
+    setGameIsOver(true);
+  }
+  if (gameIsOver && userNumber) {
+    screen = <GameOverScreen />;
+  }
   return (
     <LinearGradient
       style={styles.container}
