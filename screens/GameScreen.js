@@ -56,18 +56,19 @@ export default function GameScreen({ userNumber,onGameOver }) {
     <View style={styles.container}>
       <Title>Bilgisayar Tahmini</Title>
       <ComputerNumber>{currentGuess}</ComputerNumber>
-      <View>
-        <Text>Altında mı üstünde mi?</Text>
-         <View>
-          <CustomButton onPress={nextGuesssHandler.bind(this, 'lower')}>
+      <View style={styles.card}>
+        <Text style={styles.title}>Altında mı üstünde mi?</Text>
+        <View style={styles.buttonsContainer}>
+          <CustomButton onPress={nextGuesssHandler.bind(this, "lower")}>
             <AntDesign name="minus" size={24} color="white" />
           </CustomButton>
-          <CustomButton onPress={nextGuesssHandler.bind(this, 'greater')}>
-                        <AntDesign name="plus" size={24} color="white" />
-
+          <CustomButton onPress={nextGuesssHandler.bind(this, "greater")}>
+            <AntDesign name="plus" size={24} color="white" />
           </CustomButton>
         </View>
-   <FlatList
+      </View>
+      <View style={styles.listContainer}>
+        <FlatList
           data={guessCount}
           keyExtractor={(itemData)=>itemData}
           renderItem={(itemData) => (
