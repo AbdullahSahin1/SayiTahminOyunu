@@ -8,6 +8,20 @@ export default function GameScreen({ userNumber }) {
   const initialGuess = generateNumber(1, 100, userNumber);
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
 
+   let minNumber = 1;
+  let maxNumber = 100;
+
+  function nextGuesssHandler(direction) {
+    if (
+      (direction === 'lower' && currentGuess < userNumber) ||
+      (direction === 'greater' && currentGuess > userNumber)
+    ) {
+      Alert.alert('Hadi Oradan!', 'Yanlış olduğunu bile bile basıyorsun!...', [
+        { text: 'Tamam', style: 'cancel' },
+      ]);
+      return;
+    }
+    
   function generateNumber(min, max, exclude) {
     const randomNumber = Math.floor(Math.random() * (max - min)) + min;
 
