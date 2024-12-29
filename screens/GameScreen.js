@@ -22,6 +22,14 @@ export default function GameScreen({ userNumber }) {
       <ComputerNumber>{currentGuess}</ComputerNumber>
       <View>
         <Text>Altında mı üstünde mi?</Text>
+         <View>
+          <CustomButton onPress={nextGuesssHandler.bind(this, 'lower')}>
+            -
+          </CustomButton>
+          <CustomButton onPress={nextGuesssHandler.bind(this, 'greater')}>
+            +
+          </CustomButton>
+        </View>
       </View>
     </View>
   );
