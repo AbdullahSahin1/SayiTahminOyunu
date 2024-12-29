@@ -10,4 +10,13 @@ export default function ComputerGuess({roundNumber,guess}) {
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    listItem: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    borderWidth: 1,
+    borderColor: "#eee",
+    marginVertical: 10,
+
+  },
+})
