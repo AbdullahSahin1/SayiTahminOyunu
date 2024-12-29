@@ -19,5 +19,10 @@ const styles = StyleSheet.create({
     marginVertical: 10,
      borderRadius: 30,
     padding: 15,
+          elevation: 4,
+    shadowColor: "#eee",
+    shadowOffset: { width: 0, height: 0 },
+    shadowRadius: 6,
+    shadowOpacity: 0.25,
   },
 })
