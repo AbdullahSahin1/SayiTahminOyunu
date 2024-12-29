@@ -42,4 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: "center",
   },
+    countAndNumber: {
+    color: "green",
+  },
 });
