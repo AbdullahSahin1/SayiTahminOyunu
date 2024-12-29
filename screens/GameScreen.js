@@ -8,7 +8,11 @@ import CustomButton from '../components/CustomButton';
 export default function GameScreen({ userNumber }) {
   const initialGuess = generateNumber(1, 100, userNumber);
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
-
+     useEffect(() => {
+       if (currentGuess === userNumber) {
+         onGameOver();
+       }
+     }, [currentGuess, userNumber, onGameOver]);
 
 
   function nextGuesssHandler(direction) {
