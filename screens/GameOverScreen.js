@@ -10,8 +10,8 @@ export default function GameOverScreen() {
         <Image style={styles.image} source={require('../assets/Success.jpg')}></Image>
       </View>
       <Text style={styles.result}>
-        <Text style={styles.countAndNumber}>10</Text> denemeyle 
-        <Text style={styles.countAndNumber}> 50</Text> sayısını buldun
+      <Text style={styles.countAndNumber}>{roundsNumber}</Text> denemeyle
+        <Text style={styles.countAndNumber}> {userNumber}</Text> sayısını buldun
       </Text>
       <CustomButton>Yeni Oyuna Başla</CustomButton>
     </View>
