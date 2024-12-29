@@ -6,26 +6,42 @@ import CustomButton from '../components/CustomButton';
    let minNumber = 1;
   let maxNumber = 100;
 export default function GameScreen({ userNumber,onGameOver }) {
-  const initialGuess = generateNumber(1, 100, userNumber);
+   const initialGuess = generateNumber(1, 100, userNumber);
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
-     useEffect(() => {
-       if (currentGuess === userNumber) {
-         onGameOver();
-       }
-     }, [currentGuess, userNumber, onGameOver]);
+  const [guessCount, setGuessCount] = useState([initialGuess]);
 
+  useEffect(() => {
+    if (currentGuess === userNumber) {
+      onGameOver(guessCount.length);
+    }
+  }, [currentGuess, userNumber, onGameOver]);
+
+  useEffect(() => {
+    let minNumber = 1;
+    let maxNumber = 100;
+  }, []);
 
   function nextGuesssHandler(direction) {
     if (
-      (direction === 'lower' && currentGuess < userNumber) ||
-      (direction === 'greater' && currentGuess > userNumber)
+      (direction === "lower" && currentGuess < userNumber) ||
+      (direction === "greater" && currentGuess > userNumber)
     ) {
-      Alert.alert('Hadi Oradan!', 'Yanlış olduğunu bile bile basıyorsun!...', [
-        { text: 'Tamam', style: 'cancel' },
+      Alert.alert("Hadi Oradan!", "Yanlış olduğunu bile bile basıyorsun!...", [
+        { text: "Tamam", style: "cancel" },
       ]);
       return;
     }
-    
+
+    if (direction === "lower") {
+      maxNumber = currentGuess;
+    } else {
+      minNumber = currentGuess + 1;
+    }
+    const newRandomNumber = generateNumber(minNumber, maxNumber, currentGuess);
+    setCurrentGuess(newRandomNumber);
+    setGuessCount((prevGuess) => [newRandomNumber, ...prevGuess]);
+  }
+
   function generateNumber(min, max, exclude) {
     const randomNumber = Math.floor(Math.random() * (max - min)) + min;
 
