@@ -18,4 +18,11 @@ export default function GameOverScreen() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container:{
+    padding: 20,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
