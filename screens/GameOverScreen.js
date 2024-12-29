@@ -25,4 +25,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+    imageView: {
+    width: 350,
+    height: 350,
+    overflow: "hidden",
+    borderRadius: 175,
+    borderWidth: 3,
+    borderColor: "green",
+    margin: 30,
+  },
 });
