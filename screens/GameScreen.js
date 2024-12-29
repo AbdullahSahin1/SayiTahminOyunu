@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React, { useState } from 'react';
 import Title from '../components/Title';
 import ComputerNumber from '../components/ComputerNumber';
+import CustomButton from '../components/CustomButton';
 
 export default function GameScreen({ userNumber }) {
   const initialGuess = generateNumber(1, 100, userNumber);
