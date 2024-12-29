@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Title from '../components/Title';
 import ComputerNumber from '../components/ComputerNumber';
 import CustomButton from '../components/CustomButton';
+import AntDesign from "@expo/vector-icons/AntDesign";
    let minNumber = 1;
   let maxNumber = 100;
 export default function GameScreen({ userNumber,onGameOver }) {
