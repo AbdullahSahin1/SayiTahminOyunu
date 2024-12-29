@@ -62,7 +62,8 @@ export default function GameScreen({ userNumber,onGameOver }) {
             <AntDesign name="minus" size={24} color="white" />
           </CustomButton>
           <CustomButton onPress={nextGuesssHandler.bind(this, 'greater')}>
-            +
+                        <AntDesign name="plus" size={24} color="white" />
+
           </CustomButton>
         </View>
       </View>
