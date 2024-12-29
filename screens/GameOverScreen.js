@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import Title from '../components/Title';
 import CustomButton from '../components/CustomButton';
-export default function GameOverScreen() {
+export default function GameOverScreen({roundsNumber,userNumber}) {
   return (
     <View style={styles.container}>
       <Title>Oyun Tamamlandı</Title>
