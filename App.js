@@ -16,6 +16,11 @@ export default function App() {
     setGameIsOver(false);
   }
 
+    function startNewGameHandler() {
+    setUserNumber(null);
+    setGuessCount(0);
+  }
+
   let screen = <GameStartScreen onSendNumber={sendedNumberHandler} />;
 
   if (userNumber) {
