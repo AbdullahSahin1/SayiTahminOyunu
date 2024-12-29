@@ -28,7 +28,7 @@ export default function App() {
     setGuessCount(numberOfGuess)
   }
   if (gameIsOver && userNumber) {
-    screen = <GameOverScreen roundsNumber={guessCount} userNumber={userNumber}/>;
+    screen = <GameOverScreen roundsNumber={guessCount} userNumber={userNumber} onStartNewGame={startNewGameHandler}/>;
   }
   return (
     <LinearGradient
