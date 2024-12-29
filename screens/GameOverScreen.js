@@ -13,7 +13,7 @@ export default function GameOverScreen({roundsNumber,userNumber}) {
       <Text style={styles.countAndNumber}>{roundsNumber}</Text> denemeyle
         <Text style={styles.countAndNumber}> {userNumber}</Text> sayısını buldun
       </Text>
-      <CustomButton>Yeni Oyuna Başla</CustomButton>
+      <CustomButton onPress={onStartNewGame}>Yeni Oyuna Başla</CustomButton>
     </View>
   );
 }
