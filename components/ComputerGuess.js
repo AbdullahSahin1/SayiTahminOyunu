@@ -4,7 +4,7 @@ import React from 'react'
 export default function ComputerGuess({roundNumber,guess}) {
   return (
     <View>
-      <Text>{roundNumber}</Text>
+      <Text>{roundNumber}*</Text>
       <Text>{guess}</Text>
     </View>
   )
