@@ -105,4 +105,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+     title: {
+    color: "white",
+    fontSize: 24,
+    marginBottom: 15,
+  },
+  listContainer:{
+    marginTop: 10,
+    flex: 1,
+  }
 });
